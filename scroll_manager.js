@@ -21,19 +21,21 @@ function cambiar_pos_directamente(targetId) {
 function subir_scroll() {
     //wait_im_scrolling = true;
 
-    act_sect--;
+    act_sect = Math.max(0, act_sect-1);
 
+    
     
     switch (act_sect) {
         case 0:
-                d3.select("#titulo_footer").text("¿Cuál es el problema principal de Medellín?")
+            d3.select("#titulo_footer").text("¿Cuál es el problema principal de Medellín para los migrantes?");
             break;
         case 1:
-            d3.select("#flechita").transition().duration(100).style("opacity",1)
-            d3.select("#titulo_footer").text("¿Cuál es el problema principal de su comuna o corregimiento?")
+            
+            d3.select("#titulo_footer").text("¿Cuál es el problema principal de los migrantes en su comuna o corregimiento?");
             break;
         case 2:
-            d3.select("#titulo_footer").text("")
+            d3.select("#flechita").transition().duration(100).style("opacity",1)
+            d3.select("#titulo_footer").text("¿Cuál es el problema principal de los migrantes en su comuna o corregimiento?");
             break;
     }
 
@@ -48,7 +50,7 @@ function subir_scroll() {
 
 function bajar_scroll() {
     //wait_im_scrolling = true;
-    act_sect++;
+    act_sect = Math.min(act_sect+1, 3);
 
 
     switch (act_sect) {
@@ -59,9 +61,12 @@ function bajar_scroll() {
             d3.select("#titulo_footer").text("¿Cuál es el problema principal por comuna o corregimiento?")
             break;
         case 2:
-            d3.select("#flechita").transition().duration(100).style("opacity",0)
-            d3.select("#titulo_footer").text("")
+            d3.select("#titulo_footer").text("¿Cuál es el problema principal por comuna o corregimiento?")
             break;
+        case 3:
+            d3.select("#titulo_footer").text("Preguntas abiertas")
+            d3.select("#flechita").transition().duration(100).style("opacity",0)
+            break
     }
     $('#sect' + (act_sect)).css('visibility', 'visible');
     $('html, body').animate({

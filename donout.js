@@ -47,14 +47,21 @@ var color = d3.scaleOrdinal()
 d3.selectAll("#next")
     .on("click", next);
 
+d3.selectAll("#prev")
+    .on("click", prev);
+
 function next() {
-    
-    console.log("entro");
     let n = donoutsData.length;
     index=(index+1)%n;
 
     action(donoutsData[index]);
+}
 
+function prev() {
+    let n = donoutsData.length;
+    index=(index-1) & (n - 1)
+
+    action(donoutsData[index]);
 }
 
 function change(data) {
@@ -178,5 +185,5 @@ var index=0;
 postData(urlBack+'openQuestions', {"sexos":["Hombre","Mujer"],"edades":["jovenes","adultos","mayores"],"respuesta":[0,1,3]})
 	.then(function (data) {
         donoutsData = data;
-		action(data[0]);
+		action(data[index]);
 	})

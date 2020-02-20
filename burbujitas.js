@@ -60,6 +60,12 @@ function dibujar_burbujas(res_hist) {
                         return  (por*100).toFixed(0) + '%'
                     }
                 }
+                else if (histograma[0] && histograma[1]) {
+                    if (d.id == histograma[0].name || d.id == histograma[1].name) {
+                        var por= histograma.filter(h => h.name==d.id)[0].porcentaje;
+                        return  (por*100).toFixed(0) + '%'
+                    }
+                }
             })
             .transition().delay(500).duration(500)
             .attr("opacity", 1)

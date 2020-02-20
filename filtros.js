@@ -278,6 +278,13 @@ function click_filtro(command) {
             document.getElementById('todito_para_hide').style.opacity = 1;
         }
     });
+    var req_donout = { ...req };
+    req_donout.respuesta = [0,1,2];
+    postData(urlBack+'openQuestions', req_donout)
+	.then(function (data) {
+        donoutsData = data;
+		action(data[index]);
+	})
 
 }
 

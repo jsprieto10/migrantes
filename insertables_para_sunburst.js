@@ -1,7 +1,7 @@
 var profundidad_1 = `
 <div id="quitame" style="height: 100%; width: 100%">
     <div style="position: absolute; width: 30vw; top: 40px; left: 0;">
-        <img id="titulo_primera_pregunta" src="assets/pregunta-medellin.svg" style="border:0px solid black; margin: auto auto 0 0">  
+        <img id="titulo_primera_pregunta" src="assets/Medellin ECHO.svg" style="border:0px solid black; margin: auto auto 0 0">  
     </div>
     <div id="2r" class="row" style="height: 30%">
 
@@ -48,13 +48,20 @@ var profundidad_1 = `
 
 var profundidad_1_tercer_slide = `
 <div id="quitame" style="height: 100%; width: 100%">
-    <div id="seleccionable_pregunta_2" style="position: absolute; width: 30vw; top: 40px; left: 0;">
-        <img id="titulo_primera_pregunta" src="assets/pregunta-medellin.svg" style="border:0px solid black; margin: auto auto 0 0">  
+    <div id="seleccionable_pregunta_2" style="position: absolute; width: 40vw; top: 30px; left: 0;
+    ">
+    <div style="width: 30vw;">
+        <img id="titulo_primera_pregunta" src="assets/Medellin ECHO.svg" style="border:0px solid black; margin: auto auto 0 0">  
     </div>
+    <div class="col-12" style="font-family:UNFPA-Bold;font-size: 30pt; padding-left: 40pt;">En <span id="comuna-actual-2"
+                            style="color: #067dba;font-family:UNFPA-Bold;font-size: 30pt;padding-top: 0pt;">Comuna</span>
+                    </div>
+    </div>
+    
     <div id="2r" class="row" style="height: 30%">
 
     </div>
-    <div id="3r" class="row" style="height: 15%"></div>
+    <div id="3r" class="row" style="height: 20%"></div>
     <div id="4_y_5r" class="row" style="height: 41%">
         <div class="col-6" style="height: 100%">
             <div id="4r" class="row" style="height: 30%; ">
@@ -63,7 +70,6 @@ var profundidad_1_tercer_slide = `
                         <h1 id="percent_ods" style="margin: auto auto 0 auto"></h1>
                     </div>
                 </div>
-
             </div>
             <div id="5r" class="row" style="height: 70%; ">
                 <img src="" id="imagen_ods_sun" class="imagen_sun" style="border:0px solid black; margin: 0 auto">
