@@ -58,10 +58,10 @@ function bajar_scroll() {
                 d3.select("#titulo_footer").text("¿Cuál es el problema principal de Medellín?")
             break;
         case 1:
-            d3.select("#titulo_footer").text("¿Cuál es el problema principal por comuna o corregimiento?")
+            d3.select("#titulo_footer").text("¿Cuál es el problema principal de los migrantes en su comuna o corregimiento?");
             break;
         case 2:
-            d3.select("#titulo_footer").text("¿Cuál es el problema principal por comuna o corregimiento?")
+            d3.select("#titulo_footer").text("¿Cuál es el problema principal de los migrantes en su comuna o corregimiento?");
             break;
         case 3:
             d3.select("#titulo_footer").text("Preguntas abiertas")

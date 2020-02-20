@@ -182,7 +182,7 @@ function action(data){
 }
 var donoutsData;
 var index=0;
-postData(urlBack+'openQuestions', {"sexos":["Hombre","Mujer"],"edades":["jovenes","adultos","mayores"],"respuesta":[0,1,3]})
+postData(urlBack+'openQuestions', {"sexos":["Hombre","Mujer"],"edades":["jovenes","adultos","mayores"],"respuesta":[0]})
 	.then(function (data) {
         donoutsData = data;
 		action(data[index]);

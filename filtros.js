@@ -279,7 +279,7 @@ function click_filtro(command) {
         }
     });
     var req_donout = { ...req };
-    req_donout.respuesta = [0,1,2];
+    req_donout.respuesta = [0];
     postData(urlBack+'openQuestions', req_donout)
 	.then(function (data) {
         donoutsData = data;
